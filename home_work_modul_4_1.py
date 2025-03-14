@@ -13,9 +13,11 @@ def total_salary(path):
             total = sum(salary)
             average = total / len(salary)
             total_salary = (total, average)
-        return total_salary    
+        return total_salary  
+    except FileNotFoundError:
+        print(f"Файл {path} не найден.")    
     except Exception as e:
-        print(f"{e} with file")       
+        print(f"Ошибка{e}")       
                 
                     
 total, average = total_salary(path)
