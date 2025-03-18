@@ -22,8 +22,8 @@ def show_phone(args, contacts):
     return f"{contacts[name]}."
 
 def all_contacts(contacts):
-    for name, phone in contacts.items():
-        return f"{name}, {phone}"
+    contact_list = "\n".join([f"{name}, {phone}" for name, phone in contacts.items()])
+    return contact_list
     
 def main():
     contacts = {}
